@@ -24,7 +24,7 @@ public class FonoApiService {
             if (HttpStatus.OK.equals(statusCode) && fonoApiResponse.getBody() != null) {
                 return Optional.of(fonoApiResponse.getBody());
             } else {
-                logger.error(MessageFormat.format("Error in Fono Api. Status code: {0}", statusCode.toString()));
+                logger.warn(MessageFormat.format("Error in Fono Api. Status code: {0}", statusCode.toString()));
                 return Optional.empty();
             }
         } catch (Exception e) {

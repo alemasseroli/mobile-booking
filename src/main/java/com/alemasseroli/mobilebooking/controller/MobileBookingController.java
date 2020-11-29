@@ -32,7 +32,7 @@ public class MobileBookingController {
         if (returned) {
             return new ResponseEntity<>("Phone successfully returned", HttpStatus.OK);
         } else {
-            return new ResponseEntity<>("Phone can not be returned by that user.", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("That user can not return that phone.", HttpStatus.BAD_REQUEST);
         }
     }
 
