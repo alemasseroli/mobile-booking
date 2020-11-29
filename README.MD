@@ -19,7 +19,7 @@ cd mobile-booking
 3) Start web application running jar file.
 
 ```sh
-java -jar mobile-booking.jar
+java -jar phone-booking.jar
 ```
 
 ## Usage
