@@ -4,16 +4,19 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
 
 import static java.util.Arrays.asList;
 
 class PhoneRepository {
 
-    private Map<String, Phone> phones = initPhoneRepository();
+    private Map<String, Phone> phones;
 
-    private static final Collection<String> DEVICE_NAMES = asList(
+    PhoneRepository(Map<String, Phone> phones) {
+        this.phones = phones;
+    }
+
+    static final Collection<String> DEVICE_NAMES = asList(
             "Samsung Galaxy S9", "Samsung Galaxy S8", "Samsung Galaxy S7", "Motorola Nexus 6", "LG Nexus 5X",
             "Huawei Honor 7X", "Apple iPhone X", "Apple iPhone 8", "Apple iPhone 4s", "Nokia 3310"
     );
@@ -35,14 +38,6 @@ class PhoneRepository {
             e.printStackTrace();
             return DEVICE_NAMES.toString();
         }
-    }
-
-    private Map<String, Phone> initPhoneRepository() {
-        Map<String, Phone> phoneRepository = new HashMap<>();
-        for (String deviceName : DEVICE_NAMES) {
-            phoneRepository.put(deviceName, new AvailablePhone(deviceName));
-        }
-        return phoneRepository;
     }
 
 }

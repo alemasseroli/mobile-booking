@@ -13,9 +13,9 @@ public class BookedPhone extends Phone {
     public BookedPhone(Phone phone, String userName) {
         this.deviceName = phone.deviceName;
         this.technology = phone.technology;
-        this.twoGBands = phone.twoGBands;
-        this.threeGBands = phone.threeGBands;
-        this.fourGBands = phone.fourGBands;
+        this._2g_bands = phone._2g_bands;
+        this._3g_bands = phone._3g_bands;
+        this._4g_bands = phone._4g_bands;
         final LocalDateTime dateTime = LocalDateTime.now();
         this.bookedDate = dateTime.format(DATE_FORMATTER);
         this.bookedBy = userName;

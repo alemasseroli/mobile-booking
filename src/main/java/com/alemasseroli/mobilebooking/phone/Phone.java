@@ -1,13 +1,11 @@
 package com.alemasseroli.mobilebooking.phone;
 
-import java.util.List;
-
 public abstract class Phone {
     String deviceName;
     String technology;
-    List<String> twoGBands;
-    List<String> threeGBands;
-    List<String> fourGBands;
+    String _2g_bands;
+    String _3g_bands;
+    String _4g_bands;
 
     public abstract boolean isAvailable();
 
